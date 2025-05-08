@@ -9,8 +9,7 @@ describe('PickupCallCardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PickupCallCardComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [PickupCallCardComponent, IonicModule.forRoot()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(PickupCallCardComponent);
