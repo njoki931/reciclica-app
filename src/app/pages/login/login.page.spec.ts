@@ -27,6 +27,20 @@ describe('LoginPage', () => {
   });
 
   it('login button should direct to home page', () => {
+    spyOn(router, 'navigate');
 
-  })
+    component.login();
+
+    expect(router.navigate).toHaveBeenCalledWith(['home']);
+  });
+
+  it('register button should direct to register page', () => {
+    spyOn(router, 'navigate');
+
+    component.register();
+
+    expect(router.navigate).toHaveBeenCalledWith(['register']);
+  });
+
+  
 });
