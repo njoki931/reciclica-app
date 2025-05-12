@@ -22,6 +22,12 @@ describe('LoginPage', () => {
     fixture.detectChanges();
   }));
 
+  it('should create form', () => {
+    component.ngOnInit();
+
+    expect(true).toBeFalsy();
+
+  });
   it('should create', () => {
     expect(component).toBeTruthy();
   });

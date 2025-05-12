@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { LoginPageForm } from './login.page.form';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +11,16 @@ import { Component, inject, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  form!: FormGroup;
+
   router = inject(Router);
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { 
+    
+  }
 
   ngOnInit() {
+    this.form = new LoginPageForm(this.formBuilder).createForm();
   }
 
   register(){
