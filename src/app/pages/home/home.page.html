@@ -26,11 +26,11 @@
       <ion-card-subtitle>Last Pickup call</ion-card-subtitle>
     </ion-card-header>
 
-    <ion-button color="success" fill="clear" size="full" footer>SEE ALL...</ion-button>
+    <ion-button color="success" fill="clear" size="full" footer (click)="onClickSeeAll()">SEE ALL...</ion-button>
   </app-pickup-call-card>
   
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success">
+    <ion-fab-button color="success" (click) = "onClickCreateNewCall()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
