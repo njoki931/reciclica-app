@@ -17,7 +17,7 @@
           <ion-input label="Password" labelPlacement="floating" placeholder="Enter text" type="password" formControlName="password"
           ></ion-input>
         </ion-item>
-        <ion-button color="dark" fill="clear" size="full">Forgot email/ password</ion-button>
+        <ion-button color="dark" fill="clear" size="full" [disabled]="!form.get('email')?.valid">Forgot email/ password</ion-button>
         <ion-button color="success" size="full" [disabled]="!form.valid"  (click)="login()">Login</ion-button>
         <ion-button color="success" fill="clear" size="full" (click)="register()">Register</ion-button>
         
